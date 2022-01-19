@@ -1,7 +1,7 @@
 package it.etlabora.progetto.model;
 
-public class Books {
-	private Long id;
+public class Book {
+	private Integer id;
 	private String title;
 	private String publisher;
 	private String authors;
@@ -9,10 +9,11 @@ public class Books {
 	private String isbn;
 	private String note;
 	private String state;
-	public Long getId() {
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getTitle() {

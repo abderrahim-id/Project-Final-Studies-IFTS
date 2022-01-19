@@ -20,6 +20,14 @@
 </form>
 </div>	 
 
+<div class="libro">
+<h1>Nome Libro</h1>
+<p> Autore </p>
+<a href="/ProgettoFinale/bookDetails.jsp"> Details </a>
+<button> Modify</button>
+</div>
+
+
 
 </body>
 </html>

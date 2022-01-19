@@ -1,17 +1,18 @@
-package it.etlabora.progetto.model;
+package it.etlabora.progetto.dto;
 
-public class Users {
-	private Long id;
+public class UserDto {
+	private Integer id;
 	private String name;
 	private String surname;
 	private String email;
 	private String username;
 	private String password;
-	private Long type; // Non sono sicuro che sia di tipo Long!!!
-	public Long getId() {
+	private Boolean type;
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -44,11 +45,13 @@ public class Users {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Long getType() {
+	public Boolean getType() {
 		return type;
 	}
-	public void setType(Long type) {
+	public void setType(Boolean type) {
 		this.type = type;
 	}
+	
+	
 	
 }

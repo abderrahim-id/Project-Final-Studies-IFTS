@@ -4,4 +4,35 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>ProgettoFinale</display-name>
+	
+	<!-- Servlet login -->
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.LogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlet SignUp -->
+	<servlet>
+		<servlet-name>signupServlet</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.SignupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>signupServlet</servlet-name>
+		<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+	<!-- Catalog -->
+	<servlet>
+		<servlet-name>catalogServlet</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.CatalogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>catalogServlet</servlet-name>
+		<url-pattern>/catalog</url-pattern>
+	</servlet-mapping>
+
+	
 </web-app>

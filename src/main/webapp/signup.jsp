@@ -9,18 +9,18 @@
 </head>
 <body>
 
-<h1>Login</h1>
-<form action="" class="the-form">
-<input type="text" name="name" placeholder="Nome" required>
-<input type="text" name="surname" placeholder="Cognome" required>
-<input type="text" name="username" placeholder="Nome utente" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="password" name="password" placeholder="Password" required>
-<input type="password" name="password2" placeholder="Rinserisci Password" required>
-<input type="submit" value="SignUp">
+<h1>SignUp</h1>
+<div class="error-id">${error}</div><br>
+<form action="/ProgettoFinale/user-details" method="GET" class="the-form">
+<input type="hidden" value="${user.id}" name="id" />
+<input type="text" name="name" value="${user.name}" placeholder="Nome" required>
+<input type="text" name="surname" value="${user.surname}" placeholder="Cognome" required>
+<input type="text" name="username" value="${user.username}" placeholder="Nome utente" required>
+<input type="email" name="email" value="${user.email}" placeholder="Email" required>
+<input type="password" name="password" value="${user.password}" placeholder="Password" required>
+<!-- <input type="password" name="password2" value="${user.password}" placeholder="Rinserisci Password" required>  -->
+<input type="submit" value="SignUp"> <!-- the button to press Here should be Update if the id is not null -->
 </form>
  <p>Hai già un account? <a href="/ProgettoFinale/login">Login</a></p>
-
-
 </body>
 </html>

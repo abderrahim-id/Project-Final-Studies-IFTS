@@ -49,8 +49,8 @@ public class User {
 	public Boolean getType() {
 		return type;
 	}
-	public void setType(Boolean type) {
-		this.type = type;
+	public void setType() {
+		this.type = false;
 	}
 	
 	

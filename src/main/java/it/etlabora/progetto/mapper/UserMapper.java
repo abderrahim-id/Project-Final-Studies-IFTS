@@ -30,7 +30,7 @@ public class UserMapper {
         user.setPassword(dto.getPassword());
         user.setName(dto.getName());
         user.setSurname(dto.getSurname());
-        user.setType(dto.getType());
+        user.setType();
         user.setUsername(dto.getUsername());
         return user;
     }

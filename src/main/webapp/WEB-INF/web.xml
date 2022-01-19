@@ -33,6 +33,15 @@
 		<servlet-name>catalogServlet</servlet-name>
 		<url-pattern>/catalog</url-pattern>
 	</servlet-mapping>
+	<!-- Book Details -->
+	<servlet>
+		<servlet-name>bookDetails</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.BookDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bookDetails</servlet-name>
+		<url-pattern>/bookDetails</url-pattern>
+	</servlet-mapping>
 	<!-- User Details -->
 	<servlet>
 		<servlet-name>userDetails</servlet-name>

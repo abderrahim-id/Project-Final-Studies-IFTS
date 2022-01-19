@@ -9,18 +9,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import it.etlabora.progetto.dto.BookDto;
+import it.etlabora.progetto.dto.UserDto;
 import it.etlabora.progetto.service.BookService;
 import it.etlabora.progetto.serviceImpl.BookServiceImpl;
 
 public class CatalogServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	BookService bookService = new BookServiceImpl();
+	BookServiceImpl bookService = new BookServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<BookDto> books = bookService.getAll();
-		req.setAttribute("books", books);
-		req.getRequestDispatcher("catalog.jsp").forward(req, resp);
+		
+		String search = req.getParameter("search");
+		if(search != null) {
+			BookDto book = bookService.searchByName(search);
+			if(book == null) {
+				req.setAttribute("message", "There is no book with a title \""+search+"\"");
+				req.getRequestDispatcher("catalog.jsp").forward(req, resp);
+			}
+			else {
+				req.setAttribute("book", book);
+				req.getRequestDispatcher("catalog.jsp").forward(req, resp);
+			}
+		} else {
+			List<BookDto> books = bookService.getAll();
+			req.setAttribute("books", books);
+			req.getRequestDispatcher("catalog.jsp").forward(req, resp);
+		}
+		
+		
 	}
 }

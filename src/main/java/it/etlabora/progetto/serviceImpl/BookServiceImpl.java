@@ -95,6 +95,41 @@ public class BookServiceImpl implements BookService{
 		}
 		return bookDto;
 	}
+	
+	
+	public BookDto searchByName(String name) {
+		if(name == null) return null;
+		BookDto bookDto = null;
+		try {
+			Connection connection = DbConnection.getConnection();
+			String sql = "SELECT * FROM books WHERE title = ?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, name);
+			ResultSet rs = statement.executeQuery();
+
+			rs.next();
+			Book book= new Book();
+			
+			book.setId(rs.getInt("id"));
+			book.setTitle(rs.getString("title"));
+			book.setPublisher(rs.getString("publisher"));
+			book.setAuthors(rs.getString("authors"));
+			book.setCategory(rs.getString("category"));
+			book.setIsbn(rs.getString("isbn"));
+			book.setNote(rs.getString("note"));
+			book.setState(rs.getString("state"));
+			
+			bookDto = bookMapper.toDto(book);
+			
+			connection.close();
+		} catch(SQLException sqlEx) {
+			System.out.println("So the problem is in the Sql");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return bookDto;
+	}
 
 	@Override
 	public void delete(Integer id) {

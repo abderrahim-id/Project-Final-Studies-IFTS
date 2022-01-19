@@ -9,30 +9,49 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
+
+
 <div>
 <input type="submit" value="Aggiungi libro">
 </div>
 
 <div>
-<form>
+<form action="" method="GET">
 <label>Cerca con nome: </label>
-<input type="text" placeholder="Nome libro">
+<input type="text" name="search" placeholder="Nome libro">
 <input type="submit" value="Cerca">
 </form>
-</div>	 
+</div>	
 
+<c:if test="${book != null}">
+<h1>Search results:</h1>
+<div class="libro">
+<h1>Titolo: ${book.title}</h1>
+<p>Autore: ${book.authors}</p>
+<a href="/ProgettoFinale/bookDetails?id=${book.id}"> Details </a>
+<button> Modify</button>
+</div>
+</c:if>
+
+<c:if test="${book == null}">
+
+ 
+<h1 style="color:red;">${message}</h1>
 <div class="all-books">
 <c:forEach items="${books}" var="book">
 <div class="libro">
-<h1>${book.title}</h1>
+<h1>Titolo: ${book.title}</h1>
 <p>Autore: ${book.authors}</p>
-<a href="/ProgettoFinale/"> Details </a>
+<a href="/ProgettoFinale/bookDetails?id=${book.id}"> Details </a>
 <button> Modify</button>
 </div>
 </c:forEach>
-</div>
 
+
+</div>
+</c:if>
 </div>
 </body>
 </html>

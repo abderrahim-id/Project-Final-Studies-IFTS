@@ -10,7 +10,7 @@
 <body>
 
 <h1>SignUp</h1>
-<div class="error-id">${error}</div><br>
+<div>${error}</div><br>
 <form action="/ProgettoFinale/user-details" method="GET" class="the-form">
 <input type="hidden" value="${user.id}" name="id" />
 <input type="text" name="name" value="${user.name}" placeholder="Nome" required>

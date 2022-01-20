@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<div class="container">
 <h1>${message}</h1>
 <h1>Nuovo Libro:</h1>
 <form action="/ProgettoFinale/bookDetails?id=${book.id}" method="GET" class="the-form">
@@ -26,8 +25,6 @@
 <input type="submit" value="${operation}">
 
 </form>
-
-</div>
 
 </body>
 </html>

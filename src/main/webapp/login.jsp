@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<div class="container">
 	<form class="the-form" action="/ProgettoFinale/login">
 <h1>Login</h1>
 <h3>${message}</h3>
@@ -18,7 +17,6 @@
 <input type="submit" value="Login">
 </form>
  <p>Non hai un account? <a href="/ProgettoFinale/signup">registrati</a></p>
-</div>
 
 </body>
 </html>

@@ -10,6 +10,7 @@
 <body>
 
 <div class="container">
+<a href="/ProgettoFinale/Homepage" class="test" id="a" >Homepage</a>
 	<form class="the-form" action="/ProgettoFinale/login">
 <h1>Login</h1>
 <h3>${message}</h3>

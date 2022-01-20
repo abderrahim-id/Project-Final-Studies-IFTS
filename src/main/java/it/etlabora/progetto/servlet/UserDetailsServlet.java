@@ -25,28 +25,37 @@ public class UserDetailsServlet extends HttpServlet{
 		String idStr = req.getParameter("id");
 		
 		
-		userDto.setName(req.getParameter("name"));
-		userDto.setSurname(req.getParameter("surname"));
-		userDto.setUsername(req.getParameter("username"));
-		userDto.setPassword(req.getParameter("password"));
-		userDto.setEmail(req.getParameter("email"));
+		//userDto.setName(req.getParameter("name"));
+		//userDto.setSurname(req.getParameter("surname"));
+	//	userDto.setUsername(req.getParameter("username"));
+	//	userDto.setPassword(req.getParameter("password"));
+		//userDto.setEmail(req.getParameter("email"));
 	
-
-		try {	userDto.setId(Integer.parseInt(idStr));  } 
-		catch (Exception e) {	System.out.println("No id: new user"); }
+		Integer id = null;
+		
+		try { id = Integer.parseInt(idStr);  } 
+		catch (Exception e) {	System.out.println("No id"); }
 		
 		
-		if (userDto.getId() == null) {
+		/* if (userDto.getId() == null) {
 			req.setAttribute("message", "Created Succesfuly");
 			userService.create(userDto);
 		} else {
 			req.setAttribute("message", "Updated Succesfuly");
 			userService.update(userDto);
 		}
+		*/
 		
-
-		req.setAttribute("user", userDto);
-		req.getRequestDispatcher("user-details.jsp").forward(req, resp);
+		if(id != null) {
+			UserDto user = userService.getOne(id);
+			if(user == null) {
+				req.setAttribute("message", "Utente con id = " + id + " non trovato");
+				req.getRequestDispatcher("user-details.jsp").forward(req, resp);
+			}else {
+			req.setAttribute("user", user);
+			req.getRequestDispatcher("user-details.jsp").forward(req, resp);	
+			}
+	    }
 	}
 
 }

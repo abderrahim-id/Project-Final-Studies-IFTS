@@ -62,5 +62,13 @@
 		<url-pattern>/createBook</url-pattern>
 	</servlet-mapping>
 
-	
+		<!-- Lista utenti -->
+	<servlet>
+		<servlet-name>userslistServlet</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.ListUsersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userslistServlet</servlet-name>
+		<url-pattern>/list-users</url-pattern>
+	</servlet-mapping>
 </web-app>

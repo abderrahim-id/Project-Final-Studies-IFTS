@@ -9,9 +9,10 @@
 </head>
 <body>
 
-<div class="center-it">
-	<form class="the-form" action="">
+<div class="container">
+	<form class="the-form" action="/ProgettoFinale/login">
 <h1>Login</h1>
+<h3>${message}</h3>
 <input type="text" name="username" placeholder="Username" required>
 <input type="password" name="password" placeholder="Password" required>
 <input type="submit" value="Login">

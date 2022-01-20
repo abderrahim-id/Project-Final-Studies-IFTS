@@ -96,6 +96,37 @@ public class UserServiceImpl implements UserService {
 			}
 			return dto;
 		}
+		
+		// _______________________ getOneByUsername Method
+				public UserDto getOneByUsername(String username) {
+					if(username == null) return null;
+					UserDto dto = null;
+					try {
+						Connection connection = DbConnection.getConnection();
+						String sql = "SELECT * FROM users WHERE username = ?";
+						PreparedStatement statement = connection.prepareStatement(sql);
+						statement.setString(1, username);
+						ResultSet rs = statement.executeQuery();
+
+						rs.next();
+						User user = new User();
+						user.setId(rs.getInt("id"));
+						user.setEmail(rs.getString("email"));
+						user.setName(rs.getString("name"));
+						user.setSurname(rs.getString("surname"));
+						user.setUsername(rs.getString("username"));
+						user.setPassword(rs.getString("password"));
+						dto = userMapper.toDto(user);
+						
+						connection.close();
+					} catch(SQLException sqlEx) {
+						System.out.println("So the problem is in the Sql");
+					}
+					catch (Exception e) {
+						e.printStackTrace();
+					}
+					return dto;
+				}
 	
 
 	// _______________________ update Method

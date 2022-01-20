@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import it.etlabora.progetto.dto.BookDto;
-import it.etlabora.progetto.dto.UserDto;
-import it.etlabora.progetto.service.BookService;
 import it.etlabora.progetto.serviceImpl.BookServiceImpl;
 
 public class CatalogServlet extends HttpServlet {

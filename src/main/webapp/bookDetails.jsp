@@ -6,9 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Biblioteca EtLabora: Titolo Libro</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+
+
+<div class="container">
 <h1 style="color:red;">${message}</h1>
 
 <c:if test="${book != null}">
@@ -21,7 +25,7 @@
 	<p> Note: ${book.note}</p>
 	<button> Prenota </button>
 </c:if>
-
+</div>
 
 </body>
 </html>

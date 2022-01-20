@@ -14,7 +14,7 @@
 
 
 <div>
-<input type="submit" value="Aggiungi libro">
+<a href="/ProgettoFinale/createBook">Aggiungi libro</a>
 </div>
 
 <div>
@@ -45,7 +45,7 @@
 <h1>Titolo: ${book.title}</h1>
 <p>Autore: ${book.authors}</p>
 <a href="/ProgettoFinale/bookDetails?id=${book.id}"> Details </a>
-<button> Modify</button>
+<a href="/ProgettoFinale/createBook?id=${book.id}">Update Book</a>
 </div>
 </c:forEach>
 

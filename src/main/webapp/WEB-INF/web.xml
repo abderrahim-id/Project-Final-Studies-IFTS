@@ -42,7 +42,7 @@
 		<servlet-name>bookDetails</servlet-name>
 		<url-pattern>/bookDetails</url-pattern>
 	</servlet-mapping>
-	<!-- User Details -->
+	<!-- User Details createBook-->
 	<servlet>
 		<servlet-name>userDetails</servlet-name>
 		<servlet-class>it.etlabora.progetto.servlet.UserDetailsServlet</servlet-class>
@@ -50,6 +50,16 @@
 	<servlet-mapping>
 		<servlet-name>userDetails</servlet-name>
 		<url-pattern>/user-details</url-pattern>
+	</servlet-mapping>
+	
+		<!-- createBook -->
+	<servlet>
+		<servlet-name>createBook</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.CreateBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>createBook</servlet-name>
+		<url-pattern>/createBook</url-pattern>
 	</servlet-mapping>
 
 	

@@ -32,7 +32,7 @@ public class BookDetails extends HttpServlet {
 			}
 			
 		} 
-		catch (Exception e) {	System.out.println("No id: new user"); }
+		catch (Exception e) {	System.out.println("No id: new book"); }
 		
 		
 	}

@@ -10,19 +10,16 @@
 <style>
 
 h1#welcome{
-  font-family: 'Dancing Script', cursive;
   padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-div#details{
-  font-family: 'Dancing Script', cursive;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.detail{
+	display: block;
+	margin: 20px;
+	
 }
 
 </style>
@@ -37,11 +34,13 @@ div#details{
 <h1 id="welcome">Benvenuto ${user.name}</h1>
 </div>
 
+<h3 class="detail">Dettagli utenti</h3>
+
 <div id="details">
-<a>Username: ${user.username}</a><br>
-<a>Nome: ${user.name}</a><br>
-<a>Cognome: ${user.surname}</a><br>
-<a>Email: ${user.email}</a>
+<div class="detail">Username: ${user.username}</div>
+<div class="detail">Nome: ${user.name}</div>
+<div class="detail">Cognome: ${user.surname}</div>
+<div class="detail">Email: ${user.email}</div>
 </div>
 
 </body>

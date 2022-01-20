@@ -12,10 +12,7 @@
 <a href="/ProgettoFinale/Homepage" class="test" id="a" >Homepage</a>
 <div class="container">
 
-
-<div>
 <a href="/ProgettoFinale/createBook">Aggiungi libro</a>
-</div>
 
 <div>
 <form action="" method="GET">
@@ -27,7 +24,7 @@
 
 <c:if test="${book != null}">
 <h1>Search results:</h1>
-<div class="libro">
+<div>
 <h1>Titolo: ${book.title}</h1>
 <p>Autore: ${book.authors}</p>
 <a href="/ProgettoFinale/bookDetails?id=${book.id}"> Details </a>
@@ -41,7 +38,7 @@
 <h1 style="color:red;">${message}</h1>
 <div class="all-books">
 <c:forEach items="${books}" var="book">
-<div class="libro">
+<div>
 <h1>Titolo: ${book.title}</h1>
 <p>Autore: ${book.authors}</p>
 <a href="/ProgettoFinale/bookDetails?id=${book.id}"> Details </a>

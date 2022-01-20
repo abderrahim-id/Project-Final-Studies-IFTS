@@ -12,7 +12,7 @@
 <a href="/ProgettoFinale/catalog" class="test" id="a" >Indietro</a>
 
 
-<div class="container">
+<div>
 <h1 style="color:red;">${message}</h1>
 
 <c:if test="${book != null}">

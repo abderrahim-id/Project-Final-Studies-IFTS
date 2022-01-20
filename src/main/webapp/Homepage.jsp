@@ -10,7 +10,10 @@
 
 <style type="text/css">
 #c:hover{
-background-color:black;}
+background-color:black;
+box-shadow: 0 0 20px #eee;
+
+}
 
 
 #b:hover{
@@ -25,13 +28,18 @@ box-shadow: 0 0 20px #eee;
 background: grey;
 border: 2px solid black;
 color:white;
+text-decoration:none;
 }
 #b{
 background: grey;
 border: 2px solid black;
 color:white;
+text-decoration:none;
 }
 #c{
+background: grey;
+border: 2px solid black;
+color:white;
 text-decoration:none;
 }
 
@@ -46,7 +54,7 @@ text-decoration:none;
 
 <a href="/ProgettoFinale/signup" class="test" id="b" >Registrati</a>
 
-<button><a href="/ProgettoFinale/catalog" class="test" id="c" >Catalogo Libri</a></button>
+<a href="/ProgettoFinale/catalog" class="test" id="c" >Catalogo Libri</a>
 
 
 <img src="https://www.bibliotecavetralla.it/wp-content/uploads/2020/12/banner-biblioteca-ok3-1600x781.jpg">

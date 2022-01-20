@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<a href="/ProgettoFinale/Homepage" class="test" id="a" >Homepage</a>
 <h1>SignUp</h1>
 <div>${error}</div><br>
 <form action="/ProgettoFinale/user-details" method="GET" class="the-form">

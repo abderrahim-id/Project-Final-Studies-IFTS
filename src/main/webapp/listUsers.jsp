@@ -26,6 +26,7 @@ margin: 1mm;
 <h3>Nome: ${user.name}</h3>
 <a href="/ProgettoFinale/user-details?id=${user.id}">details</a>
 <a href="">delete</a>
+<a href="">update</a>
 </div>
 </c:forEach>
 </div>

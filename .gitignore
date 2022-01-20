@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-/build/**
 
-.classpath
-.project
-/build/
-=======
 # Compiled class file
 *.class
 
@@ -31,4 +25,3 @@ hs_err_pid*
 
 .classpath
 .project
->>>>>>> branch 'master' of https://github.com/abderrahim-id/final-project-group-A.git

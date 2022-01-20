@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<a href="/ProgettoFinale/Homepage" class="test" id="a" >Homepage</a>
 <div class="container">
 	<form class="the-form" action="/ProgettoFinale/login">
 <h1>Login</h1>

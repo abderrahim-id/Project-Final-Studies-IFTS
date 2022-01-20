@@ -69,6 +69,16 @@
 		<servlet-name>createBook</servlet-name>
 		<url-pattern>/createBook</url-pattern>
 	</servlet-mapping>
+	
+	<!-- createBook -->
+	<servlet>
+		<servlet-name>listUsers</servlet-name>
+		<servlet-class>it.etlabora.progetto.servlet.ListUsersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listUsers</servlet-name>
+		<url-pattern>/list-users</url-pattern>
+	</servlet-mapping>
 
 	
 </web-app>

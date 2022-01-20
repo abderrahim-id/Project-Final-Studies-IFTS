@@ -51,6 +51,8 @@ public class UserServiceImpl implements UserService {
 			connection.close();
 			
 			savedUserDto = this.getOne(id); 
+			
+			System.out.println("User created successfuly");
 		}catch(SQLException sqlEx) {
 			System.out.println("__________ The user is not created : the problem is in the sql __________");
 			sqlEx.printStackTrace();

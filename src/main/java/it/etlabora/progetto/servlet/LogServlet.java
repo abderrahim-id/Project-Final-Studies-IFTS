@@ -28,14 +28,15 @@ public class LogServlet extends HttpServlet{
 			UserDto user = userService.getOneByUsername(username);
 			if(user == null) {
 				req.setAttribute("message", "Username or password is not correct");
+				req.getRequestDispatcher("login.jsp").forward(req, resp);
 			} else {
 				// TODO: sign in & create session & redirect to catalog
-				req.setAttribute("message", "Successful Login");
+				req.getRequestDispatcher("Homepage.jsp").forward(req, resp);
 			}
 		}
 		
-		
 		req.getRequestDispatcher("login.jsp").forward(req, resp);
+		
 	}
 
 }
